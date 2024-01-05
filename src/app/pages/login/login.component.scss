@@ -1,0 +1,87 @@
+form {
+    width: 100%;
+}
+
+input {
+    padding: 8px 16px;
+    font-family: "Poppins", serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    width: 100%;
+    display: block;
+    background: #fff;
+    border: 1px solid #dbdbdc;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: 2px solid transparent;
+    margin-bottom: 8px;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: -8px;
+    background-color: #F9FAFC;
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #e7e9ee;
+        box-shadow: 0px 8px 8px -8px rgba(7, 7, 7, 0.16);
+        border-radius: 8px;
+        padding: 40px;
+        min-width: 300px;
+
+        &__title {
+            font-family: "Poppins", serif;
+            text-align: center;
+            font-size: 28px;
+            line-height: 34px;
+            color: #0f265c;
+            margin-bottom: 24px;
+        }
+
+        &__control-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        &__control-label {
+            font-family: "Poppins", serif;
+            font-size: 14px;
+            letter-spacing: 0px;
+            margin-bottom: 8px;
+            display: block;
+            color: #4a4a50
+        }
+    }
+
+    &__card-error {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 24px;
+        border-radius: 8px;
+        padding: 8px 40px;
+        min-width: 300px;
+        background-color: rgb(254, 240, 229);
+        border: 1px solid #f76800;
+
+        &__message {
+            font-family: "Poppins", serif;
+            color: #4a4a50;
+            font-size: 14px;
+            letter-spacing: 0px;
+            line-height: 23px;
+        }
+    }
+}

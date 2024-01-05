@@ -1,1 +1,21 @@
-<p>login works!</p>
+<div class="login-container">
+    <div class="login-container__card">
+        <label class="login-container__card__title">Ingresa a tu Sistema</label>
+        <form [formGroup]="loginForm">
+            <div class="login-container__card__control-group">
+                <label class="login-container__card__control-label" for="user-control">Usuario</label>
+                <input id="user-control" class="login-container__card__control-input" type="text"
+                    formControlName="username" />
+            </div>
+            <div class="login-container__card__control-group">
+                <label class="login-container__card__control-label" for="password-control">Contraseña</label>
+                <input id="password-control" class="login-container__card__control-input" type="password"
+                    formControlName="password" />
+            </div>
+        </form>
+        <button class="primary-button" type="button" (click)="onLogin()" [disabled]="loginForm.invalid">Login</button>
+    </div>
+    <div *ngIf="showError" class="login-container__card-error">
+        <label class="login-container__card-error__message">Tu usuario o contraseña es incorrecta.</label>
+    </div>
+</div>
