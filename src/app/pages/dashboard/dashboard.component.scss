@@ -1,0 +1,108 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: calc(100vh - 64px);
+    width: calc(100vw - 64px);
+    margin: -8px;
+    background-color: #F9FAFC;
+    padding: 32px;
+
+    &__upload-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border: 1px solid #e7e9ee;
+        border-radius: 8px;
+        padding: 14px;
+        width: 100%;
+
+        &__title {
+            font-family: "Poppins", serif;
+            font-size: 24px;
+            line-height: 34px;
+            color: #0f265c;
+        }
+
+        &__inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+
+        &__inputlabel {
+            font-family: "Poppins", serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            background-color: #ffdd00;
+            color: #0f265c;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 12px;
+            cursor: pointer;
+            margin-left: 24px;
+        }
+    }
+
+    &__table-container {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border: 1px solid #e7e9ee;
+        border-radius: 8px;
+        padding: 14px;
+        width: 100%;
+
+        &__header {
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            margin-bottom: 8px;
+            width: 100%;
+
+            &__title {
+                font-family: "Poppins", serif;
+                font-size: 24px;
+                line-height: 34px;
+                color: #0f265c;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
+table {
+    font-family: 'Poppins', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td,
+table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+table th {
+    text-align: center;
+    background-color: #ffdd00;
+    color: #0f265c;
+}
+
+.empty-row {
+    text-align: center;
+}

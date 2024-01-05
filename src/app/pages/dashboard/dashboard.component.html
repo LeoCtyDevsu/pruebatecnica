@@ -1,1 +1,41 @@
-<p>dashboard works!</p>
+<div class="dashboard-container">
+    <div class="dashboard-container__upload-container">
+        <label class="dashboard-container__upload-container__title">Debe subir un archivo:</label>
+        <input id="file" class="dashboard-container__upload-container__inputfile" type="file" accept=".xlsx"
+            (change)="onFileChange($event)" />
+        <label class="dashboard-container__upload-container__inputlabel" for="file">{{chooseFileLabel}}</label>
+    </div>
+    <div class="dashboard-container__table-container">
+        <div class="dashboard-container__table-container__header">
+            <label class="dashboard-container__table-container__header__title">Personas</label>
+            <button class="primary-button" type="button">Nueva</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Tribu</th>
+                    <th>Cédula</th>
+                    <th>Correo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngIf="rows.length === 0; else dataRows">
+                    <td class="empty-row" colspan="5">No hay información para mostrar</td>
+                </tr>
+                <ng-template #dataRows>
+                    <tr *ngFor="let row of rows; let index = index">
+                        <td>{{row.Nombre}}</td>
+                        <td>{{row.Tribu}}</td>
+                        <td>{{row.Cedula}}</td>
+                        <td>{{row.Correo}}</td>
+                        <td>
+                            <button class="danger-button" type="button" (click)="onDeleteRow(index)">Eliminar</button>
+                        </td>
+                    </tr>
+                </ng-template>
+            </tbody>
+        </table>
+    </div>
+</div>
