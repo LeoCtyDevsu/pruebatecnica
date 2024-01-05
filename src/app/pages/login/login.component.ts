@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from 'src/app/services/user.service';
+import { UserService } from './../../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -33,8 +33,6 @@ export class LoginComponent {
       } else {
         this.showError = true;
       }
-    }, error => {
-      this.showError = true;
-    })
+    });
   }
 }
